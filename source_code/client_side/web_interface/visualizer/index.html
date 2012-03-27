@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>TestAidKit.Visualizer</title>
+        <!--[ styles ]-->
+        <link rel="stylesheet" href="interface.css"/>
+        <link rel="stylesheet" href="lib/jquery-ui/jquery-ui-1.8.17.custom.css"/>
+        <link rel="shortcut icon" href="images/favicon.ico"/>
+    </head>
+    <body>
+        <noscript>
+            <p>[ turn on the JavaScript support in your browser! ]</p>
+        </noscript>
+
+        <table id="interface" name="interface" summary="JSON data visualizer">
+            <thead>
+                <tr>
+                    <td colspan="2">
+                        <h2>[ TestAidKit.Visualizer ]</h2>
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td id="treeContainer" rowspan="2">[ application object model ]</td>
+                    <td id="description" class="middle">[ node description ]</td>
+                </tr>
+
+                <tr>
+                    <td id="metadata">[ metadata ]</td>
+                </tr>
+
+                
+                <tr>
+                    <td colspan="2">
+                        <span id="tree_toolbar">
+                            <button id="get_AOM">build tree</button>
+                            <input type="checkbox" 
+                                   id="highlight_toggle"
+                                   name="highlight_toggle"/><label for="highlight_toggle">highlight</label>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div id="accordion">
+                            <h3>
+                                <a href="#" id="show_device_view">Device View</a>
+                            </h3>
+                            <div>
+                                <span id="device_view_toolbar">
+                                    <button>Refresh</button>
+                                    <input type="checkbox" id="live_update_checkbox"/><label for="live_update_checkbox">Live Update</label>
+                                    <button>Rotate Left</button>
+                                    <button>Rotate Right</button>
+                                    <button>Save Image</button>
+                                </span>
+                                <div id="image_zoom_slider"></div>
+                                <div id="device_view_container">
+                                    <div id="highlight_frame"></div>
+                                    <canvas id="device_view" width="0" height="0"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <ul id="consoleConfig">
+                            <li>whitespaces<input type="button" 
+                                                  id="whitespaceSwitch" 
+                                                  class="switchButton off" 
+                                                  value="off"/></li>
+                            <li>line numbers<input type="button" 
+                                                   id="lineNumbersSwitch"
+                                                   class="switchButton off" 
+                                                   value="off"/></li>
+                        </ul>
+
+                        <div id="console">
+                            <textarea id="command_line" spellcheck="false"></textarea>
+                            <div id="command_view"></div>
+                        </div>
+
+                        <button id="execute"   
+                                title="Use 'Ctrl + return' shortcut">execute</button>
+                    </td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td name="status" colspan="2">[ status ]</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <a id="configButton"
+           class="jButton" 
+           href="#" 
+           title="Configuration">[&#63;]</a>
+           
+        <form id="configMenu">
+            <ol>
+                <li>
+                    <u title="Device Platform">Platform</u>
+                    <p>
+                        <label>
+                            <input type="radio" 
+                                   name="device_platform" 
+                                   value="ios"
+                                   checked="checked"/> iOS
+                        </label>
+                        <label>
+                            <input type="radio" 
+                                   name="device_platform" 
+                                   value="blackberry"/> Blackberry
+                        </label>
+                        <label>
+                            <input type="radio" 
+                                   name="device_platform" 
+                                   value="android"/> Android
+                        </label>
+                    </p>
+                </li>
+                <li>
+                    <u title="Server URL">Server location</u>
+                    <p>
+                        <input name="url_protocol" 
+                               type="text" 
+                               size="5" 
+                               maxlength="5"/>
+                        ://
+                        <input name="url_source" 
+                               type="text" 
+                               size="18" 
+                               maxlength="18"/>
+                        :
+                        <input name="url_port" 
+                               type="text" 
+                               size="6" 
+                               maxlength="6"/>
+                    </p>
+                </li>
+                <li>
+                    <u title="Application Object Model settings">Application Object Model</u>
+                    <p>
+                        <label>
+                            Parent: <input name="tree_parent" 
+                                           type="text" 
+                                           size="12" 
+                                           value="class"/>
+                        </label>
+                        <label>
+                            Children: <input name="tree_children" 
+                                             type="text" 
+                                             size="12" 
+                                             value="subviews"/>
+                        </label>
+                    </p>
+                </li>
+                <li>
+                    <u title="Timestamp added to log messages">Timestamp format</u>
+                    <p>
+                        <label>
+                            <input name="time_stamp" 
+                                   type="radio" 
+                                   value="none"/> None
+                        </label>
+                        <label>
+                            <input name="time_stamp" 
+                                   type="radio" 
+                                   value="short" 
+                                   checked="checked"/> Short
+                        </label>
+                        <label>
+                            <input name="time_stamp" 
+                                   type="radio" 
+                                   value="medium"/> Medium
+                        </label>
+                        <label>
+                            <input name="time_stamp" 
+                                   type="radio" 
+                                   value="long"/> Long
+                        </label>
+                    </p>
+                    <p id="timeStampExample">
+                        <b>Example: </b>
+                    </p>
+                </li>
+                <li>
+                    <u title="Log message capacity/limit">Log capacity</u>
+                    <p>
+                        <select name="log_capacity">
+                            <option value="0" selected="selected">none</option>
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="5">5</option>
+                            <option value="n">enter value...</option>
+                        </select>
+                    </p>
+                </li>
+            </ol>
+        </form>
+
+        <!--[ scripts ]-->
+        <script type="text/javascript" src="lib/jquery/jquery-1.7.1_min.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery.cookie.js"></script>
+        <script type="text/javascript" src="lib/jquery/jquery.hotkeys.js"></script>
+        <script type="text/javascript" src="lib/jquery-ui/jquery-ui-1.8.17.custom.min.js"></script>
+        <script type="text/javascript" src="lib/jstree/jquery.jstree.js"></script>
+        <script type="text/javascript" src="tools.js"></script>
+        <script type="text/javascript" src="classes/DeviceView.js"></script>
+        <script type="text/javascript" src="Vz.js"></script>
+        <script type="text/javascript" src="script.js" defer></script>
+    </body>
+</html>

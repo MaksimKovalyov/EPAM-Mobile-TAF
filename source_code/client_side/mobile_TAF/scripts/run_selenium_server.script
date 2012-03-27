@@ -1,0 +1,7 @@
+use strict;
+use warnings;
+no warnings 'uninitialized';
+
+print "Perl script is running: start selenium server. \n";
+
+system("%JAVA_HOME%/bin/java -jar ./lib/selenium/selenium-server.jar");

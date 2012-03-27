@@ -1,0 +1,197 @@
+<project name="ProxyTest" basedir="." default="main">
+
+    <property name="src.dir"           value="src"/>
+    <property name="test.src.dir"      value="test"/>
+
+    <property name="build.dir"         value="build"/>
+	<property name="ios_builds.dir"    value="ios_builds"/>
+	<property name="frank.dir"         value="${ios_builds.dir}/target_frank"/>
+	<property name="frank_zip"         value="Debug-iphonesimulator"/>
+	<property name="ios_frank_archive.dir"
+									   value="${svn.dir}/Project/build/output"/>
+		
+	<property name="build.dir"         value="build"/>
+	
+    <property name="classes.dir"       value="${build.dir}/classes"/>
+    <property name="tests.dir"         value="${build.dir}/tests"/>
+
+	<property name="test.dir"         value="test"/>
+    <property name="logs.dir"         value="logs"/>
+    
+    <property name="jar.dir"           value="${build.dir}/jar"/>
+    <property name="report.dir"        value="${build.dir}/junitreport"/>
+    <property name="lib.dir"           value="**/*.jar"/>
+
+    <property name="httpclient.lib"    value="lib/httpclientold/commons-httpclient-3.1.jar"/>
+
+    <property name="junit.lib"         value="lib/junit/junit-4.8.2.jar"/>
+    <property name="junit.addons.lib"  value="lib/junit/junit-addons-1.4.jar"/>
+    <property name="extra01.lib"       value="lib/other/log4j-1.2.16.jar"/>
+
+    <property name="log4j.lib"         value="lib/other/log4j-1.2.16.jar"/>
+    <property name="logger.lib"        value="lib/other/slf4j-api-1.6.1.jar"/>
+    <property name="logger.extra.lib"  value="lib/other/slf4j-simple-1.6.1.jar"/>
+    <property name="extra02.lib"       value="lib/httpclientold/ws-commons-util-1.0.2.jar"/>
+
+
+    <property name="xmlrpc.client.lib" value="lib/httpclientold/xmlrpc-client-3.1.3.jar"/>
+    <property name="xmlrpc.common.lib" value="lib/httpclientold/commons-httpclient-3.1.jar"/>
+    <property name="extra03.lib" value="lib/httpclientold/xmlrpc-common-3.1.3.jar"/>
+    <property name="extra04.lib" value="lib/httpclientold/xmlrpc-server-3.1.3.jar"/>
+
+    <property name="driver.mysql"      value="lib/mysql/mysql-connector-java-5.0.8-bin.jar"/>
+    <property name="main-class"        value="com.epam.driver.tests.ProjectSuite"/>
+    
+    <property name="json.lib" value="lib/json/json-lib-2.2.2-jdk15.jar"/>
+    <property name="extra1.lib" value="lib/httpclient/ezmorph-1.0.2.jar"/>
+    <property name="extra2.lib" value="lib/httpclient/commons-beanutils-1.8.0.jar"/>
+    <property name="extra3.lib" value="lib/httpclient/commons-codec-1.4.jar"/>
+    <property name="extra4.lib" value="lib/httpclient/commons-collections-3.2.jar"/>
+    <property name="extra5.lib" value="lib/httpclient/commons-lang-2.6.jar"/>
+    <property name="extra6.lib" value="lib/httpclient/commons-logging-1.1.1.jar"/>
+    <property name="extra7.lib" value="lib/httpclient/httpclient-4.1.1.jar"/>
+    <property name="extra8.lib" value="lib/httpclient/httpclient-cache-4.1.1.jar"/>
+    <property name="extra9.lib" value="lib/httpclient/httpcore-4.1.jar"/>
+    <property name="extra10.lib" value="lib/httpclient/httpmime-4.1.1.jar"/>
+   
+    <path id="classpath">
+        <pathelement location="${classes.dir}"/>
+	<pathelement location="${lib.dir}"/>
+    </path>
+
+    <path id="lib.path.ref">
+        <fileset dir="lib" includes="**/*.jar"/>
+    </path>
+
+    <path id="test.classpath">
+        <pathelement path="${classpath}"/>
+        <pathelement location="${lib.dir}"/>
+        <pathelement location="${tests.dir}"/>
+        <pathelement location="${classes.dir}"/>
+        
+        <pathelement location="${driver.mysql}"/>
+        
+        <pathelement location="${json.lib}"/>
+        <pathelement location="${extra01.lib}"/>
+        <pathelement location="${extra02.lib}"/>
+        <pathelement location="${extra03.lib}"/>
+        <pathelement location="${extra04.lib}"/>
+        <pathelement location="${extra1.lib}"/>
+        <pathelement location="${extra2.lib}"/>
+        <pathelement location="${extra3.lib}"/>
+        <pathelement location="${extra4.lib}"/>
+        <pathelement location="${extra5.lib}"/>
+        <pathelement location="${extra6.lib}"/>
+        <pathelement location="${extra7.lib}"/>
+        <pathelement location="${extra8.lib}"/>
+        <pathelement location="${extra9.lib}"/>
+        <pathelement location="${extra10.lib}"/>
+        <pathelement location="${extra11.lib}"/>
+
+        <pathelement location="${junit.lib}"/>
+        <pathelement location="${junit.addons.lib}"/>
+
+        <pathelement location="${httpclient.lib}"/>
+
+        <pathelement location="${logger.lib}"/>
+        <pathelement location="${logger.extra.lib}"/>
+        <pathelement location="${log4j.lib}"/>
+
+        <pathelement location="${xmlrpc.client.lib}"/>
+        <pathelement location="${xmlrpc.common.lib}"/>
+    </path>
+
+    <path id="application" location="${jar.dir}/${ant.project.name}.jar"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="init" depends="clean">
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${tests.dir}"/>
+        <mkdir dir="${report.dir}"/>
+        <mkdir dir="${jar.dir}"/>
+        <mkdir dir="${test.dir}"/>
+        <mkdir dir="${logs.dir}"/>
+        
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${test.src.dir}" destdir="${tests.dir}" classpathref="test.classpath" debug="on">
+        </javac>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="test.classpath" debug="on">
+        </javac>
+        <copy todir="${classes.dir}">
+            <fileset dir="${src.dir}" excludes="**/*.java"/>
+        </copy>
+        <copy todir="${tests.dir}">
+            <fileset dir="${test.src.dir}" excludes="**/*.java"/>
+        </copy>
+    </target>
+
+    <target name="jar" depends="test">
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}" excludes="**/*Test.class">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="prepare_build">
+    	<copy file="${ios_frank_archive.dir}/${frank_zip}.zip" todir="${frank.dir}"/>
+    	<unzip src="${frank.dir}/${frank_zip}.zip" dest="${frank.dir}"/>
+    </target>
+	
+    <target name="test" depends="compile">
+        <junit printsummary="true" haltonfailure="no" showoutput="yes" logfailedtests="true">
+            <classpath>
+                <path refid="test.classpath"/>
+                <path location="${classes.dir}"/>
+            </classpath>
+
+            <formatter type="plain"/>
+
+            <batchtest fork="yes" todir="${report.dir}">
+                <fileset dir="${src.dir}" includes="**/*ProjectSuite.java"/>
+            </batchtest>
+        </junit>
+    </target>
+
+	 <target name="testNoCompile">
+	        <junit printsummary="true" haltonfailure="no" showoutput="yes" logfailedtests="true">
+	            <classpath>
+	                <path refid="test.classpath"/>
+	                <path location="${classes.dir}"/>
+	            </classpath>
+
+	            <formatter type="plain"/>
+
+	            <batchtest fork="yes" todir="${report.dir}">
+	                <fileset dir="${src.dir}" includes="**/*ProjectSuite.java"/>
+	            </batchtest>
+	        </junit>
+	    </target>
+
+	
+    <target name="junitreport" depends="test">
+        <junitreport todir="${report.dir}">
+            <fileset dir="${report.dir}" includes="TEST-*.xml"/>
+            <report format="noframes" todir="${report.dir}"/>
+        </junitreport>
+    </target>
+
+    <target name="run" depends="jar">
+        <java fork="true" classname="${main-class}">
+            <classpath>
+                <path refid="classpath"/>
+                <path refid="application"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="clean-build" depends="clean,jar"/>
+
+    <target name="main" depends="clean,run"/>
+
+</project>

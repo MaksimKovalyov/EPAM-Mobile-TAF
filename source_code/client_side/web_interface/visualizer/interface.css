@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px normal Monaco, monospace;
+    color: #000;
+    background: #ddd url("images/grained_back.png") repeat 0 0;
+}
+
+#interface {
+    width: 80%;
+    max-width: 1200px;
+    min-width: 800px;
+    border: 1px solid #777;
+    background-color: #aca;
+    margin: 3em auto;
+    border-radius: 1em;
+    -moz-border-radius: 1em;
+    box-shadow: 0 0 6px #777;
+    -moz-box-shadow: 0 0 6px #777;
+}
+
+td {
+    width: 50%;
+    padding: 1em;
+    vertical-align: top;
+    line-height: 1.6em;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 0.86em;
+    -moz-border-radius: 0.86em;
+}
+
+td.middle {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none !important;
+    display: block;
+}
+
+u {
+    text-decoration: none;
+    background-color: #ffb;
+    border-top: 1px dashed #fa0;
+    border-bottom: 1px dashed #fa0;
+    cursor: help;
+}
+
+u:hover {
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+ol li {
+    margin-left: 2em;
+    padding: 0.5em 0;
+}
+
+noscript p {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    text-align: center;
+    padding-top: 2em;
+    background-color: #fff;
+    opacity: 0.86;
+    font-size: 2em;
+    /*
+    filter: alpha(opacity = 86);
+    */
+}
+
+select {
+    font-family: monospace;
+}
+
+#console {
+    margin: 0 auto 1em;
+    padding: 1em;
+    border: 1px solid #999;
+    border-radius: 1em;
+    -moz-border-radius: 1em;
+    box-shadow: inset 0 0 8px #aaa;
+    -moz-box-shadow: inset 0 0 8px #aaa;
+}
+
+#command_line, #command_view {
+    width: 100%;
+    height: 1.6em;
+    max-height: 16em;
+    line-height: 1.6em;
+    border: 0 none;
+    font-size: 1em;
+}
+
+#command_view {
+    display: none;
+    overflow: auto;
+}
+
+label {
+    vertical-align: text-bottom;
+}
+
+.fail {
+    color: #f00;
+}
+
+.pass {
+    color: #00f;
+}
+
+.on {
+    background-color: #4a4;
+}
+
+.off {
+    background-color: #f44;
+}
+
+.key {
+    background-color: #cff;
+}
+
+.value {
+    background-color: #fcc;
+}
+
+.key, .value {
+    display: inline-block;
+    padding: 4px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    line-height: 0.8em;
+    -moz-border-radius: 3px;
+    box-shadow: 1px 1px 2px #777;
+    -moz-box-shadow: 1px 1px 2px #777;
+}
+
+.whitespace {
+    color: #aaa;
+}
+
+.log_info, .log_warn, .log_error {
+    font-size: 85%;
+    text-transform: uppercase;
+    margin: 0 0.5em;
+    padding: 1px;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.log_info {
+    background-color: #cdf;
+    border-color: #79f;
+}
+
+.log_warn {
+    background-color: #ff0;
+    border-color: #cc0;
+}
+
+.log_error {
+    background-color: #fbb;
+    border-color: #f55;
+}
+
+.linkButton {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.4em 0.8em;
+    border: 2px solid #ffa900;
+    border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    background-color: #ffb;
+    color: #000;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.linkButton:hover {
+    border-color: #dd7500;
+}
+
+.linkButton:active {
+    background-color: #ff5;
+}
+
+.button_container {
+    text-align: center;
+}
+
+.switchButton {
+    width: 2.8em;
+    margin-left: 0.5em;
+    color: #fff;
+    font-size: 0.95em;
+    font-family: monospace;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #000;
+    -moz-box-shadow: 1px 1px 1px #000;
+    cursor: pointer;
+}
+
+.switchButton:active {
+    box-shadow: 0 0 1px #000;
+    -moz-box-shadow: 0 0 1px #000;
+}
+
+.status {
+    display: none;
+    margin: 0.4em;
+    padding: 0.75em;
+    border: 1px dashed #aaa;
+    background-color: #ffd;
+}
+
+.status:hover {
+    background-color: #ffb;
+}
+
+.status p {
+    white-space: pre-wrap;
+}
+
+.status a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    line-height: 100%;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #777;
+    border-bottom: 1px solid #777;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    padding: 0.2em;
+    float: right;
+    background-color: #eee;
+}
+
+.status a:active {
+    border-left: 1px solid #777;
+    border-top: 1px solid #777;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+#content {
+    border: 1px solid #777;
+    max-width: 600px;
+}
+
+/* <Device View> */
+#device_view_container {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+
+#highlight_frame {
+    display: none;
+    position: absolute;
+    border: 1px solid rgb(255, 255, 0);
+    background-color: rgba(255, 255, 0, 0.3);
+    color: rgb(255, 255, 0);
+    font: 65% bold monospace;
+    text-align: left;
+    text-shadow: 0 0 3px #777;
+    cursor: pointer;
+    box-shadow: 0 0 3px #777;
+    -moz-box-shadow: 0 0 3px #777;
+}
+/* </Device View> */
+
+#consoleConfig {
+    list-style-type: none;
+    margin: 0 0 2.6em 0.4em;
+}
+
+#consoleConfig li {
+    float: left;
+    margin-right: 1em;
+    padding-right: 1em;
+    border-right: 1px dotted #000;
+}
+
+#consoleConfig li:last-child {
+    border: none;
+}
+
+#configButton {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    font-size: 1.7em;
+    font-weight: bold;
+    border-radius: 0.2em 0 0 0;
+    box-shadow: -1px -1px 6px #999;
+    -moz-box-shadow: -1px -1px 6px #999;
+}
+
+#configButton:hover {
+    color: #f50;
+}
+
+#configMenu {
+    display: none;
+}
+
+#configMenu input {
+    font-family: monospace;
+    margin: 0.5em 0;
+}
+
+#configMenu select {
+    margin: 0.5em 0;
+}
+
+#configMenu hr {
+    margin: 1em 0;
+}
