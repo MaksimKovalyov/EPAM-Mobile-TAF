@@ -1,3 +1,0 @@
-For set up, TAF needs system configuring:
-1) Set on "Enable access for assistive devices." - System->Preferences->Universal Access->Set on Enable Access
-After it, script should have access to quit from simulator and other Apple script actions should be allowed. 
