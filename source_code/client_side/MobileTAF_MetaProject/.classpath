@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/derby/derby.jar"/>
+	<classpathentry kind="lib" path="lib/derby/derbyclient.jar"/>
+	<classpathentry kind="lib" path="lib/excel/OpenXLS-6.0.6.jar"/>
+	<classpathentry kind="lib" path="lib/junit/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="lib/junit/junit-addons-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/mysql/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="lib" path="lib/other/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/selenium/selenium-java-client-driver.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="lib/json/json-lib-2.2.2-jdk15.jar"/>
+	<classpathentry kind="lib" path="lib/selenium/selenium-server.jar"/>
+	<classpathentry kind="lib" path="lib/selenium20/selenium-server-standalone-2.5.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
