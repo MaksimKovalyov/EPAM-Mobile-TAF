@@ -6,6 +6,7 @@ EPAM Mobile TAF
 * Core technology overview
 * Implementation details
 * Authors
+* Special thanks
 
 What is Mobile TAF?
 -------------------
@@ -36,3 +37,7 @@ Authors
 -------
 * Viktar Karanevich
 * Denis Shamgin
+
+Special thanks
+--------------
+*Coming soon...*
