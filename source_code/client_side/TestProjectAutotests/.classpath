@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/junit/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="lib/excel/OpenXLS-6.0.6.jar"/>
+	<classpathentry kind="lib" path="lib/other/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/selenium/selenium-java-client-driver.jar"/>
+	<classpathentry kind="lib" path="lib/selenium20/selenium-java-2.5.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/iOSDriver"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/MobileTAF_MetaProject"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
