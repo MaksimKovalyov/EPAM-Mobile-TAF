@@ -471,5 +471,4 @@ static char ctrl[0x22];
     return !*c;
 }
 
-
 @end

@@ -1,6 +1,5 @@
 #import "HTTPResponse.h"
 
-
 @implementation HTTPFileResponse
 
 - (id)initWithFilePath:(NSString *)filePathParam

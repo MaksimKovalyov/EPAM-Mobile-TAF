@@ -1,6 +1,4 @@
-//
 // Prefix header for all source files of the 'Frank' target in the 'Frank' project
-//
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>

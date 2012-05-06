@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-
 #import "HTTPResponse.h"
 
 @class RoutingHTTPConnection;
@@ -10,8 +9,6 @@
 - (BOOL) canHandlePostForPath: (NSArray *)path;
 
 @end
-
-
 
 @interface RequestRouter : NSObject {
 	NSMutableArray *_routes;

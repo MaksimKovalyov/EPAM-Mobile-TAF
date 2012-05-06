@@ -126,4 +126,3 @@
 @interface NSObject (SBProxyForJson)
 - (id)proxyForJson;
 @end
-

@@ -1,10 +1,8 @@
-//
 //  GetElement.m
 //  Frank
 //
 //  Created by Viktar on 11/28/11.
 //  Copyright (c) 2011 EPAM Systems. All rights reserved.
-//
 
 #import "GetElement.h"
 #import "UIServiceAssistant.h"
@@ -36,6 +34,5 @@
 	
 	[uiAssistant release];
 }
-
 
 @end

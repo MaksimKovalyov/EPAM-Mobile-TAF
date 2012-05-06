@@ -1,10 +1,8 @@
-//
 //  UIXPath.m
 //  Frank
 //
 //  Created by Viktar on 10/10/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import "UIXPath.h"
 #import "SFLogger.h"

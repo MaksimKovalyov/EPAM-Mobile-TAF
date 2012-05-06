@@ -1,10 +1,8 @@
-//
 //  DelegateCommand.m
 //  ReutersInsider
 //
 //  Created by Viktar on 4/27/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import "MemoryWarningCommand.h"
 
@@ -40,6 +38,5 @@
 	return [ress JSONRepresentation];
 	
 }
-
 
 @end

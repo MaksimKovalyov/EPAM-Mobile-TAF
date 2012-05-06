@@ -1,10 +1,8 @@
-//
 //  TestCommand.h
 //  Frank
 //
 //  Created by Viktar on 5/17/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import <FrankCommandRoute.h>

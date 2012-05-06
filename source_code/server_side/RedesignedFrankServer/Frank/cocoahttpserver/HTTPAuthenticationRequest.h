@@ -5,7 +5,6 @@
 #import <CFNetwork/CFNetwork.h>
 #endif
 
-
 @interface HTTPAuthenticationRequest : NSObject
 {
 	BOOL isBasic;

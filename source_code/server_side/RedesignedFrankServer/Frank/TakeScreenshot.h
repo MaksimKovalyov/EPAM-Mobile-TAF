@@ -1,10 +1,8 @@
-//
 //  TakeScreenshot.h
 //  Frank
 //
 //  Created by Viktar on 10/13/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import <Command.h>
 #import "FrankCommandRoute.h"

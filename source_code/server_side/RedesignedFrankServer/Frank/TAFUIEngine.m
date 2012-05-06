@@ -1,10 +1,8 @@
-//
 //  UIEngine.m
 //  Frank
 //
 //  Created by Viktar on 10/10/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import "TAFUIEngine.h"
 #import "TAFParser.h"
@@ -20,7 +18,6 @@
 // The second method returns the element by index in hierarchy of the UITree with defined parent.
 // The first method operates with index as collector index of all elements in the UITree.
 // The second method operates with index as index in relation parent-childs and it is an index of child.
-// Clarify later the misunderstanding index methods.
 
 @implementation TAFUIEngine
 

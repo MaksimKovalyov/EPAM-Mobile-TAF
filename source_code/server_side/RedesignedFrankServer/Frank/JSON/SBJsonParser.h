@@ -49,7 +49,6 @@
 
 @end
 
-
 /**
  @brief The JSON parser class.
  
@@ -83,5 +82,3 @@
 @interface SBJsonParser (Private)
 - (id)fragmentWithString:(id)repr;
 @end
-
-

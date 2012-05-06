@@ -1,10 +1,8 @@
-//
 //  UIServiceAssistant.h
 //  Frank
 //
 //  Created by Viktar on 7/7/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 @interface UIServiceAssistant : NSObject {
 	NSString *command;
@@ -53,6 +51,5 @@
 
 - (id) applyToTarget:(id)target selector:(NSString *)sel attributes:(NSArray *)atr;
 - (id) applyToTarget:(id)target selector:(NSString *)sel attribute:(NSString *)atr;
-
 
 @end

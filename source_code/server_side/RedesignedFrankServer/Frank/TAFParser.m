@@ -1,13 +1,10 @@
-//
 //  Parser.m
 //  Frank
 //
 //  Created by Viktar on 7/6/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import "TAFParser.h"
-
 
 @implementation TAFParser
 
@@ -60,7 +57,5 @@ static TAFParser *sharedSingleton_ = nil;
 	
 	return [NSArray arrayWithArray:pathParts];
 }
-
-
 
 @end

@@ -65,4 +65,3 @@
 - (NSString *)JSONRepresentation;
 
 @end
-

@@ -16,8 +16,7 @@ static char encodingTable[64] = {
 'w','x','y','z','0','1','2','3','4','5','6','7','8','9','+','/' };
 #endif
 
-- (NSData *)md5Digest
-{
+- (NSData *)md5Digest{
 #if TARGET_OS_IPHONE
 	
 	unsigned char result[CC_MD5_DIGEST_LENGTH];
@@ -32,8 +31,7 @@ static char encodingTable[64] = {
 #endif
 }
 
-- (NSData *)sha1Digest
-{
+- (NSData *)sha1Digest{
 #if TARGET_OS_IPHONE
 	
 	unsigned char result[CC_SHA1_DIGEST_LENGTH];
@@ -48,8 +46,7 @@ static char encodingTable[64] = {
 #endif
 }
 
-- (NSString *)hexStringValue
-{
+- (NSString *)hexStringValue{
 #if TARGET_OS_IPHONE
 	
 	NSMutableString *stringBuffer = [NSMutableString stringWithCapacity:([self length] * 2)];
@@ -71,8 +68,7 @@ static char encodingTable[64] = {
 #endif
 }
 
-- (NSString *)base64Encoded
-{
+- (NSString *)base64Encoded{
 #if TARGET_OS_IPHONE
 	
 	const unsigned char	*bytes = [self bytes];
@@ -131,8 +127,7 @@ static char encodingTable[64] = {
 #endif
 }
 
-- (NSData *)base64Decoded
-{
+- (NSData *)base64Decoded{
 #if TARGET_OS_IPHONE
 	
 	const unsigned char	*bytes = [self bytes];

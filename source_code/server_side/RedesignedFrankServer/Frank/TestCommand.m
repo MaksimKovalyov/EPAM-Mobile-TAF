@@ -1,10 +1,8 @@
-//
 //  TestCommand.m
 //  Frank
 //
 //  Created by Viktar on 5/17/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import "TestCommand.h"
 
@@ -17,7 +15,6 @@
 	
 	return res;
 }
-
 
 - (NSString *)handleCommandWithRequestBody:(NSString *)requestBody {
 	
@@ -66,6 +63,5 @@
 		
 	}
 }
-
 
 @end

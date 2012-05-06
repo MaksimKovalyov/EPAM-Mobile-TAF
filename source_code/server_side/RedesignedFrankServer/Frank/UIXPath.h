@@ -1,10 +1,8 @@
-//
 //  UIXPath.h
 //  Frank
 //
 //  Created by Viktar on 10/10/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 

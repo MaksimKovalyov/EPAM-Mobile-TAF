@@ -9,7 +9,6 @@
 @class HTTPServer;
 @protocol HTTPResponse;
 
-
 #define HTTPConnectionDidDieNotification  @"HTTPConnectionDidDie"
 
 @interface HTTPConnection : NSObject

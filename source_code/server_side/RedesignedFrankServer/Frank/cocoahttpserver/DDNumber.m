@@ -1,6 +1,5 @@
 #import "DDNumber.h"
 
-
 @implementation NSNumber (DDNumber)
 
 + (BOOL)parseString:(NSString *)str intoSInt64:(SInt64 *)pNum

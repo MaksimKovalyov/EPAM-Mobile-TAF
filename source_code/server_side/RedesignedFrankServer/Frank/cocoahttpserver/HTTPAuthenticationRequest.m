@@ -5,7 +5,6 @@
 - (NSString *)nonquotedSubHeaderFieldValue:(NSString *)param fromHeaderFieldValue:(NSString *)header;
 @end
 
-
 @implementation HTTPAuthenticationRequest
 
 - (id)initWithRequest:(CFHTTPMessageRef)request

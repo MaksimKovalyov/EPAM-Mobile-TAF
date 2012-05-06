@@ -1,10 +1,8 @@
-//
 //  FrankServer.m
 //  Frank
 //
 //  Created by phodgson on 5/24/10.
 //  Copyright 2010 ThoughtWorks. See NOTICE file for details.
-//
 
 #import "FrankServer.h"
 #import "HTTPServer.h"

@@ -1,13 +1,10 @@
-//
 //  RoutingHTTPConnection.m
 //  Frank
 //
 //  Created by phodgson on 5/30/10.
 //  Copyright 2010 ThoughtWorks. See NOTICE file for details.
-//
 
 #import "RoutingHTTPConnection.h"
-
 #import "RequestRouter.h"
 
 @interface RoutingHTTPConnection(Private)

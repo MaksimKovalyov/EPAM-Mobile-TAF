@@ -1,4 +1,3 @@
-//
 //  AsyncSocket.h
 //  
 //  This class is in the public domain.
@@ -6,7 +5,6 @@
 //  Updated and maintained by Deusty Designs and the Mac development community.
 //
 //  http://code.google.com/p/cocoaasyncsocket/
-//
 
 #import <Foundation/Foundation.h>
 

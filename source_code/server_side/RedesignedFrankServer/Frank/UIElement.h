@@ -1,10 +1,8 @@
-//
 //  UIElement.h
 //  Frank
 //
 //  Created by Viktar on 10/10/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -41,7 +39,6 @@
 -(NSString *) getPropertyWith: (NSString *) _attributeName;
 
 + (id) callFrom:(id)target method:(SEL)_selector;
-
 
 // getters for custom attributes
 - (NSString *)HTMLSource;

@@ -1,10 +1,8 @@
-//
 //  UITree.m
 //  Frank
 //
 //  Created by Viktar on 10/11/11.
 //  Copyright 2011 EPAM Systems. All rights reserved.
-//
 
 #import "UITree.h"
 #import "UIElement.h"
