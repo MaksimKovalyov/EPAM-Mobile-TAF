@@ -187,6 +187,7 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 	return screenshot;
 }
 
+// TODO: light redesign
 -(void) complyWithSEVCommand{
 	UIElement *element_ = nil;
 	if ((classNameChain == nil)||([classNameChain isEqualToString:@""])) {
@@ -196,14 +197,25 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
         element_ = [TAFUIEngine findBy:xpath_];
         [xpath_ release];
     }
-	[element_ flash];	
-	[element_ setText:value];
-	[element_ becomeActive];
+	[element_ flash];
 	
+    if ([[element_ sourceObject] isKindOfClass:[UISwitch class]]) {
+        BOOL isOn = [value intValue] ? YES : NO;
+        [(UISwitch*)[element_ sourceObject] setOn:isOn];
+    }
+    if ([[element_ sourceObject] isKindOfClass:[UITextField class]])
+    {
+        [element_ setText:value];
+        [element_ becomeActive];
+	}
+    
     if (element_ == nil) {
         [self setCommandResult:@"The element is not found."];
-    }
-	//[element_ release];
+    } else {
+        [self setCommandResult:@"The element is found."];
+    } 
+
+    //[element_ release];
 }
 
 - (void) log: (NSArray *)array notice: (NSString *)notice_{
