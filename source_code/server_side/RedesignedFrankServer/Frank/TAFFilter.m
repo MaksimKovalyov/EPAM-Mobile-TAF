@@ -33,6 +33,12 @@ static TAFFilter *sharedSingleton_ = nil;
     result = [result stringByReplacingOccurrencesOfString:@"%3C" withString:@"<"];
     result = [result stringByReplacingOccurrencesOfString:@"%5B" withString:@"["];
     result = [result stringByReplacingOccurrencesOfString:@"%5D" withString:@"]"];
+    result = [result stringByReplacingOccurrencesOfString:@"%3A" withString:@":"];
+    result = [result stringByReplacingOccurrencesOfString:@"%2C" withString:@","];
+    result = [result stringByReplacingOccurrencesOfString:@"%3D" withString:@"="];
+    result = [result stringByReplacingOccurrencesOfString:@"+" withString:@" "];
+    result = [result stringByReplacingOccurrencesOfString:@"%40" withString:@"@"];
+
 	
 	return result;
 }
