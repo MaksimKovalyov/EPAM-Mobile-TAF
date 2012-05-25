@@ -10,7 +10,7 @@ EPAM Mobile TAF
 
 What is Mobile TAF?
 -------------------
-It is a Test Automation Framework (TAF) for mobile applications. It is an effort by **EPAM Systems**.
+It is a Test Automation Framework (TAF) for mobile applications. It is an effort by **EPAM Systems** engineers.
 
 Our solution:
 
