@@ -5,7 +5,6 @@ EPAM Mobile TAF
 * General testing approach
 * Core technology overview
 * Implementation details
-* Authors
 * Special thanks
 * Contributions welcome!
 
@@ -34,14 +33,16 @@ Implementation details
 ----------------------
 *Coming soon...*
 
-Authors
--------
-* Viktar Karanevich
-* Denis Shamgin
-
 Special thanks
 --------------
-*Coming soon...*
+I'd like to express my deep gratitude to the people who helped me to create the Mobile TAF solution.
+My sincere thanks go to: 
+* Andrei Petrashkevich for his valuable advices, constructive comments and architecture idea.
+* German Lomakin for his efforts on Blackberry Driver project.
+* Denis Shamgin for his efforts on Visualizer project.
+* Volga Yurkova for her amazing ideas about visualization of complex structure, documentation and specification writing.
+* Sergey Nezdoliy for his investigations of Android platform. 
+This project would not have been possible without the knowledge of these people, their experience and willingness to give their time.
 
 Contributions welcome!
 ----------------------
