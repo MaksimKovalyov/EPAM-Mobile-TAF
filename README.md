@@ -42,6 +42,7 @@ My sincere thanks go to:
 * Denis Shamgin for his efforts on Visualizer project.
 * Volga Yurkova for her amazing ideas about visualization of complex structure, documentation and specification writing.
 * Sergey Nezdoliy for his investigations of Android platform. 
+
 This project would not have been possible without the knowledge of these people, their experience and willingness to give their time.
 
 Contributions welcome!
