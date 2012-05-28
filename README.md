@@ -47,4 +47,6 @@ This project would not have been possible without the knowledge of these people,
 
 Contributions welcome!
 ----------------------
-We are always happy support Open Source idea. Just fork this repo and send a pull request. You can help with new features code, new code implementation, code review, bug fixes, documentation improvements and any idea you like and think it can help. For any suggestions/questions/feedback, please, send your e-mail to Viktar_Karanevich@epam.com.
+We are always happy support Open Source idea. Just fork this repo and send a pull request. You can help with new features code, new code implementation, code review, bug fixes, documentation improvements and any idea you like and think it can help. 
+
+For any suggestions/questions/feedback, please, send your e-mail to Viktar_Karanevich@epam.com.
