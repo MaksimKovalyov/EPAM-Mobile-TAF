@@ -37,10 +37,10 @@ Special thanks
 --------------
 I'd like to express my deep gratitude to the people who helped me to create the Mobile TAF solution.
 My sincere thanks go to: 
-* Andrei Petrashkevich for his valuable advices, constructive comments and architecture idea.
-* German Lomakin for his efforts on Blackberry Driver project.
-* Denis Shamgin for his efforts on Visualizer project.
-* Volga Yurkova for her amazing ideas about visualization of complex structure, documentation and specification writing.
+* Andrei Petrashkevich for his valuable advices, constructive comments and the architecture idea.
+* German Lomakin for the efforts he put in to the Blackberry Driver project.
+* Denis Shamgin for the efforts he put in to the Visualizer project.
+* Volha Yurkova for her amazing ideas about the visualization of the complex structure, documentation and the specification writing.
 * Sergey Nezdoliy for his investigations of Android platform. 
 
 This project would not have been possible without the knowledge of these people, their experience and willingness to give their time.
