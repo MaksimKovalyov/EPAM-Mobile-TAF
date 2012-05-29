@@ -39,6 +39,7 @@ I'd like to express my deep gratitude to the people who helped me to create the 
 My sincere thanks go to: 
 * Andrei Petrashkevich for his valuable advices, constructive comments and the architecture idea.
 * German Lomakin for the efforts he put in to the Blackberry Driver project.
+* Maksim Kavaliou for the efforts he put in to the MobileTAF project.
 * Denis Shamgin for the efforts he put in to the Visualizer project.
 * Volha Yurkova for her amazing ideas about the visualization of the complex structure, documentation and the specification writing.
 * Sergey Nezdoliy for his investigations of Android platform. 
