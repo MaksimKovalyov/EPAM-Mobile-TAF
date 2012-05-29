@@ -1,0 +1,13 @@
+# IDE related files #
+#####################
+.project
+.idea
+
+# Version Control System files #
+################################
+.svn
+
+# OS generated files #
+######################
+.DS_Store*
+Thumbs.db

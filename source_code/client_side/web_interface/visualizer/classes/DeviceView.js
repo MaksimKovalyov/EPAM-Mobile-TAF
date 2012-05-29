@@ -1,4 +1,10 @@
 /**
+ * @fileOverview Contains device view related logic.
+ * @version      0.5
+ * @author       <a href="mailto:Denis_Shamgin@epam.com">Denis Shamgin</a>
+ */
+
+/**
  * Wraps the HTML &lt;canvas&gt; element.Some methods and properties are not moved to a prototype since there are private properties and methods (+ a single object instance is expected to be used).
  * @class
  * @param {String} locator jQuery-ready element locator.

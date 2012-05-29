@@ -1,6 +1,7 @@
 /**
  * @fileOverview Visualizer core. Licensed under GNU GPL v3.
  * @version      1.0
+ * @author       <a href="mailto:Denis_Shamgin@epam.com">Denis Shamgin</a>
  */
 
 (function (window) {
