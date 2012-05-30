@@ -22,6 +22,6 @@ Prerequisites
 -------------
 Browsers (recent versions): Mozilla Firefox, Google Chrome, Opera, Safari.
 
-Author
-------
-Denis Shamgin (<a href="mailto:Denis_Shamgin@epam.com">e-mail</a>)
+Questions? Comments?
+--------------------
+Will do my best assisting you! Contact me by e-mail <a href="mailto:Denis_Shamgin@epam.com">Denis_Shamgin@epam.com</a>.
